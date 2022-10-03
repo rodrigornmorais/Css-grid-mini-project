@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <title>Criação de Layout Através de Css Grid</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Criação de Layout Através de Css Grid">
+    <meta name="author" content="Rodrigo Morais">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/185989bd8f.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        [class*="col-"] {
+            float: left;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            background-color: #eee7d4;
+        }
+
+        .header {
+            background-color: #83bdbe;
+            color: #223240;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .topnav {
+            background-color: #223240;
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        #float-right {
+            float: right;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+        }
+
+        li {
+            display: inline;
+        }
+
+        li a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #eee7d4;
+        }
+
+        a:hover {
+            background-color: #d9895b;
+        }
+
+        #section1 {
+            margin-top: 20px;
+        }
+
+        .coluna4 {
+            padding: 5px;
+        }
+
+        #section2 {
+            background-color: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #223240;
+            color: #eee7d4;
+            padding: 10px;
+        }
+
+        .coluna3 {
+            padding: 10px;
+        }
+
+        .coluna3-border {
+            border-left: 1px solid #eee7d4;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <img src="pictures/Camera2.jpg" alt="Imagem cabeçalho" width="600px">
+
+        <h1>O meu website</h1>
+
+        <p>Construído com Css Grid e com comportamento responsivo.</p>
+
+    </div>
+
+    <div class="topnav">
+
+        <ul>
+
+            <li><a href="#"><i class="fas fa-home"></i></a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contatos</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li id="float-right"><a href="#"><i class="fas fa-search"></i></a></li>
+
+        </ul>
+
+    </div>
+
+    <div class="row" id="section1">
+
+        <div class="coluna4 col-4">
+
+            <img id="image_header" src="pictures/Camera.jpg" alt="Imagem" width="100%">
+
+        </div>
+
+        <div class="coluna8 col-8">
+
+            <h2>Título 2</h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatem repellendus accusamus delectus sunt expedita, harum porro tempora.
+                Consequuntur esse, necessitatibus aliquam qui laboriosam magni fuga tempore
+                obcaecati ducimus molestias commodi!
+            </p>
+
+            <a href="#">Saiba +</a>
+
+        </div>
+
+    </div>
+
+    <div class="row" id="section2">
+
+        <div class="coluna4 col-4">
+
+            <h2>Título 3.1</h2>
+
+            <img id="image_header1" src="pictures/Camera3.jpg" alt="Imagem" width="100%">
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Nostrum cupiditate veniam officiis similique dolorem praesentium at laborum odio.
+                Quas provident harum recusandae atque at iusto? Omnis dolorem dicta velit fuga.
+            </p>
+
+            <a href="#">Saiba +</a>
+
+        </div>
+
+        <div class="coluna4 col-4">
+
+            <h2>Título 3.2</h2>
+
+            <img id="image_header2" src="pictures/Camera5.jpg" alt="Imagem" width="100%">
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Nostrum cupiditate veniam officiis similique dolorem praesentium at laborum odio.
+                Quas provident harum recusandae atque at iusto? Omnis dolorem dicta velit fuga.
+            </p>
+
+            <a href="#">Saiba +</a>
+
+        </div>
+
+        <div class="coluna4 col-4">
+
+            <h2>Título 3.3</h2>
+
+            <img id="image_header3" src="pictures/Camera4.jpg" alt="Imagem" width="100%">
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Nostrum cupiditate veniam officiis similique dolorem praesentium at laborum odio.
+                Quas provident harum recusandae atque at iusto? Omnis dolorem dicta velit fuga.
+            </p>
+
+            <a href="#">Saiba +</a>
+
+        </div>
+
+    </div>
+
+    <div class="row footer">
+
+        <div class="coluna3 col-3">
+
+            <h3>Footer 1</h3>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        </div>
+
+        <div class="coluna3-border col-3">
+
+            <h3>Footer 2</h3>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        </div>
+
+        <div class="coluna3-border col-3">
+
+            <h3>Footer 3</h3>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        </div>
+
+        <div class="coluna3-border col-3">
+
+            <h3>Footer 4</h3>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
